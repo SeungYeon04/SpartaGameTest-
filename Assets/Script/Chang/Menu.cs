@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
 
     public GameObject MenuScrin;
     public GameObject MyStatsScrin;
+    public GameObject InventoryScrin; 
 
     //메뉴 터치와 창 닫기 
 
@@ -40,4 +41,13 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("ATM");
     }
 
+    public void InventoryOpen()
+    {
+        InventoryScrin.SetActive(true); 
+    }
+
+    public void InventoryBack()
+    {
+        InventoryScrin.SetActive(false);
+    }
 }

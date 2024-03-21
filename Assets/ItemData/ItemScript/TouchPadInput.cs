@@ -52,13 +52,8 @@ public class TouchPadInput : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(touchPosition, Vector2.zero);
 
-        Debug.Log("레이캐스트를 발사한 위치: " + touchPosition);
-        Debug.Log("레이캐스트 결과: " + hit.collider);
-
-        if (hit.collider != null && hit.collider.CompareTag("Item"))
+        if (hit.collider != null && hit.collider.CompareTag("Item")) //터치 후 또 다른 조건 캐릭터가 달려가서 충돌해서 애니메이션 실행 후 습득
         {
-            Debug.Log("충돌한 오브젝트 태그: " + hit.collider.tag);
-
             // 아이템을 획득하거나 아이템을 터치한 위치로 이동하는 등의 작업을 수행
             Debug.Log("아이템을 획득했습니다!");
 

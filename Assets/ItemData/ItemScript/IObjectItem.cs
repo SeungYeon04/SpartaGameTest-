@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPickUp : MonoBehaviour
+public interface IObjectItem 
 {
-    public Item item; 
+    Item ClickItem(); 
 }
